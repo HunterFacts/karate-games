@@ -9,7 +9,7 @@
   </head>
   <body>
     <div id="unity-container" class="unity-desktop">
-      <canvas id="unity-canvas" width=375 height=667 tabindex="-1"></canvas>
+      <canvas id="unity-canvas" width=375 height=500 style="width: 100%" tabindex="-1"></canvas>
       <div id="unity-loading-bar">
         <div id="unity-logo"></div>
         <div id="unity-progress-bar-empty">
@@ -95,7 +95,7 @@
         // Desktop style: Render the game canvas in a window that can be maximized to fullscreen:
 
         canvas.style.width = "375px";
-        canvas.style.height = "667px";
+        canvas.style.height = "500px";
       }
 
       loadingBar.style.display = "block";
@@ -107,7 +107,9 @@
           progressBarFull.style.width = 100 * progress + "%";
               }).then((unityInstance) => {
                 loadingBar.style.display = "none";
-                unityInstance.SetFullscreen(1);
+                fullscreenButton.onclick = () => {
+                  unityInstance.SetFullscreen(1);
+                };
               }).catch((message) => {
                 alert(message);
               });
