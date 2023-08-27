@@ -1,6 +1,12 @@
-body { padding: 0; margin: 0; overflow: hidden;
-background-color: black;
+@font-face {
+  font-family: 'Exo 2';
+  src: url('Exo2-Bold.ttf') format('truetype');
 }
+body { padding: 0; margin: 0; overflow: hidden;
+  font-family: 'Exo 2', sans-serif;
+  background-color: black;
+}
+
 #unity-container { position: absolute }
 #unity-container.unity-desktop { 
   left: 50%;
@@ -49,4 +55,5 @@ background-color: black;
   text-align: center;
   font-size: 24px;
   color: white;
+  opacity: 0.75;
 }
