@@ -121,7 +121,7 @@
       script.src = loaderUrl;
       script.onload = () => {
         createUnityInstance(canvas, config, (progress) => {
-          loadProcent.textContent = 100 * progress + "%";
+          loadProcent.textContent = Math.round(100 * progress) + "%";
               }).then((unityInstance) => {
                 twoIcon.style.display = "block";
                 setTimeout(() => {
